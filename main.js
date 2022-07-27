@@ -108,6 +108,13 @@ function displayLibrary() {
         removeBtnContainer.classList.add("btn", "btn-danger");
         const removeBtn = document.createTextNode("Remove");
         removeBtnContainer.appendChild(removeBtn);
+        //Add a click event listener to the removeBtnContainer button that removes the book from the library
+        removeBtnContainer.addEventListener("click", () => {
+            //Delete the book from the myLibrary array
+            myLibrary.splice(i, 1);
+            //Call the displayLibrary to update the library
+            displayLibrary();
+        });
         //Append all elements to the card body
         cardBody.appendChild(bookTitleContainer);
         cardBody.appendChild(bookAuthorContainer);
