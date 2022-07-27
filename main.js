@@ -95,6 +95,14 @@ function displayLibrary() {
             const readStatus = document.createTextNode("Not Read");
             readStatusContainer.appendChild(readStatus);
         }
+        //Add a click event listener to the readStatusContainer button that toggles the readStatus of the book
+        readStatusContainer.addEventListener("click", (e) => {
+            myLibrary[i].toggleReadStatus();
+            //Call the displayLibrary function to update the books
+            displayLibrary();
+            //Prevent the form from refreshing the page
+            e.preventDefault();
+        });
         //Create the remove button
         const removeBtnContainer = document.createElement("button");
         removeBtnContainer.classList.add("btn", "btn-danger");
