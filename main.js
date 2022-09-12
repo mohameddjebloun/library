@@ -11,11 +11,12 @@ class Book {
         this.pages = pages;
         this.isRead = isRead;
     }
+    //Create toggleReadStatus method that toggles the isRead variable
+    toggleReadStatus() {
+        this.isRead = !this.isRead;
+    }
 }
-//Create the Book object method toggleReadStatus that toggles the isRead variable
-Book.prototype.toggleReadStatus = function () {
-    this.isRead = !this.isRead;
-};
+
 //Create the addBookToLibrary function
 function addBookToLibrary() {
     //Query select the addNewBook button, the form and the form container
