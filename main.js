@@ -2,12 +2,15 @@
 let myLibrary = [];
 //Call the functions
 addBookToLibrary();
-//Create the Book constructor
-function Book(title, author, pages, isRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.isRead = isRead;
+//Create the Book class
+class Book {
+    //Create the Book constructor
+    constructor(title, author, pages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead;
+    }
 }
 //Create the Book object method toggleReadStatus that toggles the isRead variable
 Book.prototype.toggleReadStatus = function () {
